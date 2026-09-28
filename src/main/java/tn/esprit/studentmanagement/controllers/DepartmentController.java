@@ -17,7 +17,8 @@ public class DepartmentController {
     private IDepartmentService departmentService;
 
     @GetMapping("/getAllDepartment")
-    public List<Department> getAllDepartment() { return departmentService.getAllDepartments(); }
+    public List<Department> getAllDepartment() { return departmentService.getAllDepartments();
+    //tester le buil ici }
 
     @GetMapping("/getDepartment/{id}")
     public Department getDepartment(@PathVariable Long id) { return departmentService.getDepartmentById(id); }
