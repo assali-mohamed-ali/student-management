@@ -15,7 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 public class DepartmentController {
     private IDepartmentService departmentService;
-
+    @GetMapping("test")public String test(){return "test"; }
     @GetMapping("/getAllDepartment")
     public List<Department> getAllDepartment() { return departmentService.getAllDepartments();
     //tester le buil ici 2 }
