@@ -18,7 +18,7 @@ public class DepartmentController {
 
     @GetMapping("/getAllDepartment")
     public List<Department> getAllDepartment() { return departmentService.getAllDepartments();
-    //tester le buil ici }
+    //tester le buil ici 2 }
 
     @GetMapping("/getDepartment/{id}")
     public Department getDepartment(@PathVariable Long id) { return departmentService.getDepartmentById(id); }
