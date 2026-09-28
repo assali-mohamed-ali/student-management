@@ -8,7 +8,7 @@ import tn.esprit.studentmanagement.services.IEnrollment;
 import java.util.List;
 
 @RestController
-@RequestMapping("/Enrollment")
+@RequestMapping("/enrollments")
 @CrossOrigin(origins = "http://localhost:4200")
 @AllArgsConstructor
 public class EnrollmentController {

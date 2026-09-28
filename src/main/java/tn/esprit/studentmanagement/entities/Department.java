@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.List;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Getter
@@ -21,5 +22,7 @@ public class Department {
     private String head; // chef de département
 
     @OneToMany(mappedBy = "department")
+    @JsonIgnore
+    @ToString.Exclude
     private List<Student> students;
 }

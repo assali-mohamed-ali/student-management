@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.List;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Getter
@@ -21,6 +22,8 @@ public class Course {
     private String description;
 
     @OneToMany(mappedBy = "course")
+    @JsonIgnore
+    @ToString.Exclude
     private List<Enrollment> enrollments;
 
 }

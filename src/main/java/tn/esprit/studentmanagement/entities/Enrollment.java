@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Getter
@@ -21,9 +22,11 @@ public class Enrollment {
     private Status status;
 
     @ManyToOne
+    @ToString.Exclude
     private Student student;
 
     @ManyToOne
+    @ToString.Exclude
     private Course course;
 
 
